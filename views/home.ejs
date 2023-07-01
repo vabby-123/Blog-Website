@@ -1,0 +1,23 @@
+<%- include("Partials/header") -%>
+
+
+<h1>Home</h1>
+
+<div class="box">
+    <p> <%= homeStartingContent %></p>
+    
+
+</div>
+
+<% for(var i=0;i<post.length;i++){ %>   <!--post since post is defined in app.get -->
+
+<h1> <%=post[i].title %> </h1>
+  <p> <%=post[i].postPara.substring(0,100) + "...."%> <a href="/posts/<%=post[i].title %>" class="readMore">Read More</a></p>
+  <% } %>  
+
+<!-- <%post.forEach(function(post){  %>   #first post for defined in app.get, second function(post) for object in app.post
+
+<% console.log(post.title); %>
+<% })  %>  -->
+
+<%- include("Partials/footer") -%>
